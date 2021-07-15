@@ -1,0 +1,28 @@
+{
+  "name": "arvis-meteor-packages",
+  "version": "0.0.3",
+  "description": "Search meteor packages in arvis",
+  "main": "src/index.js",
+  "files": [
+    "arvis-workflow.json",
+    "index.js",
+    "data.json",
+    "icon.png"
+  ],
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup",
+    "prepublishOnly": "arvish-prepublish"
+  },
+  "author": {
+    "name": "Sasikanth Dronavalli",
+    "email": "sasi.kanth80@gsmail.com",
+    "url": "sasi.io"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "arvish": ">=0.6.1",
+    "ddp": "^0.12.1",
+    "fs": "0.0.1-security"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Tools",
+  "creator": "Sasikanth Dronavalli",
+  "description": "Search Meteor JS Packages",
+  "name": "arvis-meteor-packages",
+  "readme": "",
+  "webAddress": "https://github.com/arvis-workflows/arvis-meteor-packages",
+  "enabled": true,
+  "version": "0.0.3",
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "title": "Search Meteor Packages",
+      "command": "mp",
+      "scriptFilter": "node index.js",
+      "runningSubtext": "Hold on a sec until script work is done...",
+      "argType": "optional",
+      "withspace": true,
+      "actions": [
+        {
+          "type": "cond",
+          "modifiers": "normal",
+          "if": {
+            "cond": "{var:action} == 'clipboard'",
+            "actions": {
+              "then": [
+                {
+                  "type": "clipboard",
+                  "modifiers": "normal",
+                  "text": "{query}"
+                }
+              ],
+              "else": [
+                {
+                  "type": "open",
+                  "modifiers": "normal",
+                  "target": "{query}"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
