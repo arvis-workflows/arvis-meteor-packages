@@ -25,3 +25,10 @@ In arvis, type `mp` followed by a package name
 ## License
 
 MIT © [Sasikanth](https://sasi.io)
+
+
+## 🔗 This workflow is converted from [alfred-workflow](https://github.com/sasikanth513/alfred-meteor-packages).
+
+* Note that there might be some code change or different actions from the original workflow.
+
+* Marked original workflow's creator to author.
